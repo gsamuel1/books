@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/books.iml" filepath="$PROJECT_DIR$/.idea/modules/books.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/books_main.iml" filepath="$PROJECT_DIR$/.idea/modules/books_main.iml" group="books" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/books_test.iml" filepath="$PROJECT_DIR$/.idea/modules/books_test.iml" group="books" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_main.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_main.iml" group="readinglist" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_test.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_test.iml" group="readinglist" />

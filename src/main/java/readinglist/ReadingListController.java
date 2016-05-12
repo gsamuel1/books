@@ -3,7 +3,6 @@ package readinglist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -32,6 +31,17 @@ public class ReadingListController {
     public String readersBooks(@PathVariable("reader") String reader, Model model) {
 
         List<Book> readingList = readingListRepository.findByReader(reader);
+        if(readingList != null){
+            model.addAttribute("books", readingList);
+        }
+
+        return "readingList";
+    }
+
+    @RequestMapping(value="/isbn/{isbn}", method= RequestMethod.GET)
+    public String readersBooksByIsbn(@PathVariable("isbn") String isbn, Model model) {
+
+        List<Book> readingList = readingListRepository.findByIsbn(isbn);
         if(readingList != null){
             model.addAttribute("books", readingList);
         }

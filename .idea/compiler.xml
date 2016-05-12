@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="books_main" target="1.8" />
+      <module name="books_test" target="1.8" />
       <module name="readinglist_main" target="1.8" />
       <module name="readinglist_test" target="1.8" />
     </bytecodeTargetLevel>

@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.WebIntegrationTest;
@@ -14,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.thoughtworks.selenium.SeleneseTestNgHelper.*;
+import static com.thoughtworks.selenium.SeleneseTestNgHelper.assertEquals;
 
 /**
  * Created by pivotal on 5/11/16.
@@ -23,7 +22,7 @@ import static com.thoughtworks.selenium.SeleneseTestNgHelper.*;
 @SpringApplicationConfiguration(classes=ReadingListApplication.class)
 @WebIntegrationTest(randomPort = true)
 public class ServerWebTests {
-    private static SafariDriver chromeDriver;
+    private static ChromeDriver chromeDriver;
 
 
 
@@ -32,7 +31,7 @@ public class ServerWebTests {
 
     @BeforeClass
     public static void openBrowser() {
-        chromeDriver = new SafariDriver();
+        chromeDriver = new ChromeDriver();
         chromeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
